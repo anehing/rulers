@@ -24,6 +24,8 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "rest-client"
   #spec.add_runtime_dependency "some_gem", "1.3.0"
   #spec.add_runtime_dependency "other_gem", ">0.8.2"
+ spec.add_development_dependency "pry"
+ spec.add_development_dependency "pry-nav"
 
   spec.add_development_dependency "rake", "~> 10.0"
 end
