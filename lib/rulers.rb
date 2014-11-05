@@ -12,9 +12,9 @@ module Rulers
         return [404, {'Content-Type'=>'text/html'},[]]
       end
       begin
-     	klass,act = get_controller_and_action(env)
-     	controller = klass.new(env)
-      	text = controller.send(act) 
+     	  klass,act = get_controller_and_action(env)
+     	  controller = klass.new(env)
+        text = controller.send(act) 
       rescue LoadError
       	p 'no controller'
       	text = 'no controller'
