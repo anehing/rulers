@@ -1,9 +1,9 @@
-require 'erubis
+require "erubis"
 
-template ==<<TEMPLATE
+template = <<TEMPLATE
 Hello! This is a template
 
-it has a <%= whaterever%>
+it has a <%= whatever%>
 TEMPLATE
 
 eruby = Erubis::Eruby.new(template)
