@@ -2,7 +2,10 @@
 
 TODO: Write a gem description
 
+与rack2 on rails的区别是,rack2 on rails 采用routes路由的方式，匹配controller+action.rulers采用miss_method 和 const_get,处理
+
 ## Installation
+
 
 Add this line to your application's Gemfile:
 
@@ -21,6 +24,7 @@ Or install it yourself as:
 ## Usage
 
 TODO: Write usage instructions here
+
 
 ## Contributing
 
