@@ -15,26 +15,15 @@ module Rulers
      	  klass,act = get_controller_and_action(env)
      	  controller = klass.new(env)
         text = controller.send(act) 
-      rescue LoadError
-      	p 'no controller'
-      	text = 'no controller'
-      rescue NoMethodError
-      	p 'no method'
-      	text = 'no method'
+      rescue LoadError => le
+        p 'LoadError'
+        text = le.backtrace.to_s
+      rescue NoMethodError => me
+        p 'NoMethodError'
+        text = me.backtrace.to_s
       end
 
       [200,{'Content-Type'=>'text/html'},[text]]
-    end
-  end
-
-  class Controller
-    
-    def initialize(env)
-
-      @env = env
-    end
-    def env
-      @env
     end
   end
 end
